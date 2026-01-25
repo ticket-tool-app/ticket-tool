@@ -1,0 +1,123 @@
+name: Bug report
+description: Something in Ticket Tool is not working the way it should.
+title: "[Bug]: "
+labels: ["bug", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If this is a setup question rather than a bug, ask in the
+        [support server](https://ticket-tool.app/discord) instead. It is faster.
+
+        Do not include bot tokens, API keys, session cookies, or other people's
+        personal information in this issue.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where does it happen?
+      options:
+        - Discord bot (slash commands, panels, ticket channels)
+        - Web dashboard
+        - Support flows / flow builder
+        - Automation rules
+        - Knowledge base or public portal
+        - Analytics
+        - AI features
+        - REST API / webhooks
+        - Notifications (push, email, SMS)
+        - Billing or subscriptions
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the behaviour you saw.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Number the steps so we can follow the exact path you took.
+      placeholder: |
+        1. Open the dashboard and go to Categories
+        2. Edit the "Support" category
+        3. Toggle Transcripts on and save
+        4. Open a ticket in Discord, and no transcript is posted
+    validations:
+      required: true
+
+  - type: input
+    id: server-id
+    attributes:
+      label: Discord server ID
+      description: >
+        The server this happened in. It is what makes the matching log entries
+        findable, so include it if you can.
+        [How to find it](https://ticket-tool.app/docs/guides/find-discord-id).
+    validations:
+      required: false
+
+  - type: input
+    id: when
+    attributes:
+      label: When did it happen?
+      description: Approximate date and time, with your timezone or UTC offset.
+      placeholder: "2026-01-01 14:30 AEST"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: plan
+    attributes:
+      label: Plan
+      options:
+        - Free
+        - Community
+        - Pro
+        - Team
+        - Enterprise
+        - Not sure
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: For dashboard issues, your browser and operating system. For bot issues, desktop / web / mobile Discord.
+      placeholder: "Chrome 140 on Windows 11 / Discord mobile on iOS"
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots, logs, or anything else
+      description: Screenshots and the output of `/health` or `/debug` are useful. Redact anything sensitive first.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I have searched the existing issues and this has not already been reported.
+          required: true
+        - label: This is not a security vulnerability. (Those go through [SECURITY.md](https://github.com/Ticket-Tool-App/ticket-tool/blob/main/SECURITY.md).)
+          required: true
+        - label: I have not included any tokens, keys, or other people's personal information.
+          required: true

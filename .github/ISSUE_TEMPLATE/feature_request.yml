@@ -1,0 +1,75 @@
+name: Feature request
+description: Suggest something Ticket Tool should be able to do.
+title: "[Feature]: "
+labels: ["enhancement", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem behind the request as well as the feature itself.
+        Knowing what you are trying to achieve often opens up a better solution
+        than the one you started with.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of Ticket Tool?
+      options:
+        - Discord bot (slash commands, panels, ticket channels)
+        - Web dashboard
+        - Support flows / flow builder
+        - Automation rules
+        - Knowledge base or public portal
+        - Analytics
+        - AI features
+        - REST API / webhooks
+        - Notifications (push, email, SMS)
+        - Organizations and multi-server management
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: What does your team do today, and where does it fall down?
+      placeholder: >
+        Our moderators handle appeals and general support in the same queue, and there
+        is no way to stop appeal tickets showing up in the general support analytics.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like Ticket Tool to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What have you tried instead?
+      description: Workarounds you are using now, or other approaches you considered.
+    validations:
+      required: false
+
+  - type: input
+    id: scale
+    attributes:
+      label: How big is your server, and how many tickets a month?
+      description: Helps us understand the scale the feature needs to work at.
+      placeholder: "12,000 members, roughly 400 tickets a month"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I have searched the existing issues and this has not already been requested.
+          required: true
+        - label: I have checked the [documentation](https://ticket-tool.app/docs) and this is not already possible.
+          required: true

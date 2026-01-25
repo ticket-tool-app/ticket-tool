@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Setup help and general questions
+    url: https://ticket-tool.app/discord
+    about: The fastest way to get help. Ask in the support server before opening an issue.
+  - name: Documentation
+    url: https://ticket-tool.app/docs
+    about: Guides for categories, panels, flows, automations, the API, and more.
+  - name: Billing, subscriptions, and account
+    url: mailto:support@ticket-tool.app
+    about: Anything involving payments or your account. Please email rather than opening a public issue.
+  - name: Privacy and data requests
+    url: mailto:privacy@ticket-tool.app
+    about: Data exports, deletion requests, and privacy questions.
+  - name: Report a security vulnerability
+    url: https://github.com/Ticket-Tool-App/ticket-tool/security/advisories/new
+    about: Report privately. Never disclose a vulnerability in a public issue.
